@@ -1,0 +1,59 @@
+\documentclass{standalone}
+\usepackage[T2A,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{tikz}
+\usetikzlibrary {positioning}
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri}
+\begin{document}
+    \begin{tikzpicture}
+        \node at (4,0) [rectangle,draw](before) {%
+            \begin{tikzpicture}
+                \node at ( 0,0) [circle,draw,fill=red!20] (){};
+                \node at ( 0,2) [circle,draw,fill=red!20] (){};
+                \node at ( 2,0) [circle,draw,fill=red!20] (){};
+                \node at ( 2,2) [circle,draw,fill=red!20] (){};
+                
+                \node at ( 2,4) [circle,draw,fill=red!20] (){};
+                \node at ( 0,4) [circle,draw,fill=red!20] (){};
+                
+
+                \node at ( 1,0) [circle,draw,fill=green!20] (){};
+                \node at ( 1,2) [circle,draw,fill=blue!20] (){};
+
+                \node at ( 0,3) [circle,draw,fill=blue!20] (){};
+                \node at ( 2,3) [circle,draw,fill=blue!20] (){};
+                \node at ( 1,4) [circle,draw,fill=blue!20] (){};
+
+                \node at ( 0,1) [circle,draw,fill=blue!20] (){};
+                \node at ( 2,1) [circle,draw,fill=blue!20] (){};
+
+            \end{tikzpicture}
+        };
+        \node at (0,0) [rectangle,draw](after) {%
+            \begin{tikzpicture}
+                \node at ( 0,0) [circle,draw,fill=red!20] (){};
+                \node at ( 0,2) [circle,draw,fill=red!20] (){};
+                \node at ( 2,0) [circle,draw,fill=red!20] (){};
+                \node at ( 2,2) [circle,draw,fill=red!20] (){};
+
+                \node at ( 2,4) [circle,draw,fill=red!20] (){};
+                \node at ( 0,4) [circle,draw,fill=red!20] (){};
+                
+
+                \node at ( 1,2) [circle,draw,fill=blue!20] (){};
+                \node at ( 1,0) [circle,draw,fill=blue!20] (){};
+
+                \node at ( 0,3) [circle,draw,fill=blue!20] (){};
+                \node at ( 2,3) [circle,draw,fill=blue!20] (){};
+                \node at ( 1,4) [circle,draw,fill=blue!20] (){};
+
+                \node at ( 0,1) [circle,draw,fill=blue!20] (){};
+                \node at ( 2,1) [circle,draw,fill=blue!20] (){};
+            \end{tikzpicture}
+        };
+        \draw [ultra thick,->] (after) -- (before);
+
+        
+      \end{tikzpicture}
+\end{document}

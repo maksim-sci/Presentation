@@ -1,0 +1,31 @@
+\documentclass{standalone}
+\usepackage[T2A,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{tikz}
+\usetikzlibrary {positioning}
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri}
+\begin{document}
+    \begin{tikzpicture}
+        \node at ( 0,7) [rectangle,fill=blue!20,draw] (material) {\textbf{Свойства модельных материалов}};
+        \node at ( 0,3) [rectangle,draw] (mainblock){%
+            \begin{tikzpicture}
+                \node at ( 0,2) [rectangle,fill=green!20,draw](KMC) {\textbf{Решение КМК}};
+                \node at ( 5,2) [rectangle,fill=red!20,draw](charge) {\textbf{Распределение зарядов}};
+                \node at ( 5,0) [rectangle,fill=green!20,draw](puasson) {\textbf{Решение 3d ур-ний Пуассона}};
+                \node at ( 0,0) [rectangle,fill=red!20,draw](elnapr) {\textbf{Карта напряжений}};
+
+                \draw [->] (KMC) -- (charge);
+                \draw [->] (charge) -- (puasson);
+                \draw [->] (puasson) -- (elnapr);
+                \draw [->] (elnapr) -- (KMC);
+            \end{tikzpicture}
+        };
+        \node at ( -3,6) [rectangle,fill=blue!20,draw] (evaluation){\textbf{Сравнение с данными}};
+        \node at ( 3,6) [rectangle,fill=blue!20,draw] (geometry){\textbf{Геометрия системы}};
+
+        \draw [->] (material) -- (mainblock);
+        \draw [->] (evaluation) -- (mainblock);
+        \draw [->] (geometry) -- (mainblock);
+      \end{tikzpicture}
+\end{document}
