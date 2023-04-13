@@ -21,11 +21,16 @@
                 \draw [->] (elnapr) -- (KMC);
             \end{tikzpicture}
         };
+        \node at ( -3,0) [rectangle,fill=blue!20,draw] (newstructure) {\textbf{Ток через устройство}};
+        \node at ( 3,0) [rectangle,fill=blue!20,draw] (current) {\textbf{Формирующаяся структура}};
+
         \node at ( -3,6) [rectangle,fill=blue!20,draw] (evaluation){\textbf{Сравнение с данными}};
         \node at ( 3,6) [rectangle,fill=blue!20,draw] (geometry){\textbf{Геометрия системы}};
 
         \draw [->] (material) -- (mainblock);
         \draw [->] (evaluation) -- (mainblock);
         \draw [->] (geometry) -- (mainblock);
+        \draw [->] (mainblock) -- (newstructure);
+        \draw [->] (mainblock) -- (current);
       \end{tikzpicture}
 \end{document}
