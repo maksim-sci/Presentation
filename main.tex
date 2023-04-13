@@ -110,35 +110,67 @@
 
 \begin{frame} {Реакции}
 
-\begin{tabular}{p{3.3cm} | p{3.3cm}| p{3.3cm}}
+    \begin {multicols} {2}
+
     \textbf{Ионные реакции}
-    \begin{itemize}
-        \item Дрифт ионов в межузельные положения и обратно
-        \item Образование пар ион-вакансия и рекомбинация
+    \begin {multicols} {2}
+    \begin{figure}
         
-    \end{itemize} &
+        \centering
+        \includegraphics[width=60px]{schemes/reacts/R1.pdf}
+        \caption{Образование пары ион-вакансия}
+        
+    \end{figure}
+
+    \columnbreak
+    \begin{figure}
+
+        \centering
+        \includegraphics[width=60px]{schemes/reacts/R3.pdf}
+        \caption{Рекомбинация пары ион-вакансия}
+
+    \end{figure}
+
+    \end{multicols}
+
+    \begin {multicols} {2}
+        
+    \begin{figure}
+
+        \centering
+        \includegraphics[width=60px]{schemes/reacts/R2.pdf}
+        \caption{Перескок иона кисловода между межузельными положениями}
+
+    \end{figure}
+    \columnbreak
+    \begin{figure}
+
+        \centering
+        \includegraphics[width=60px]{schemes/reacts/R4.pdf}
+        \caption{Перескок иона кислорода мижду узловыми положениями}
+
+    \end{figure}
+    \end{multicols}
+
+    \columnbreak
+
     \textbf{Электронный транспорт и динамика}
     \begin{itemize}
-        \item Эмиссия шотки
+        \item Эффект Шотки
         \item Эмиссия Пуля-Френкеля
-        \item Туннелирование между ловушек
         \item Прямое туннелирование
-    \end{itemize} &
-    \textbf{Электронные реакции}
-    \begin{itemize}
-        \item Перескок электрона с электрода на вакансию
-        \item Перескок электрона между вакансиями
-        \item Перескок электрона с вакансии на электрод
+        \item Туннелирование с помощью ловушек
     \end{itemize}
 
-
-
-
-\end{tabular}
-
+    \end{multicols}
 \end{frame}
 
 \begin{frame} {Симулируемая структура}
+    \begin{itemize}
+        \item Структура мемристора - слой диэлектрика, заключенный между парой электродов.
+        \item Проводимость мемристора определяется ростом в нем определенной структуры - филаменты (нити).
+        \item Филамент в большинстве случаев формируется на неоднородности электрода, поэтому неоднородность добавлена к электроду. \footnotemark[3]
+    \end{itemize}
 
     \begin {multicols} {2}
     \begin{figure}
@@ -164,49 +196,18 @@
 \end{frame}
 
 %Слайд с ионными реакциями
-\begin{frame}{Ионные реакции}
-    \begin{figure}
+% \begin{frame}{Ионные реакции}
+%     \begin{figure}
 
-        \centering
-        \includegraphics[height=40px]{schemes/reacts/types.pdf}
+%         \centering
+%         \includegraphics[height=40px]{schemes/reacts/types.pdf}
 
-    \end{figure}
-
-    \begin {multicols} {2}
-    \begin{figure}
-
-        \centering
-        \includegraphics[width=100px]{schemes/reacts/R1.pdf}
-        \caption{реакция R1}
-        
-    \end{figure}
-    
-    \begin{figure}
-
-        \centering
-        \includegraphics[width=100px]{schemes/reacts/R2.pdf}
-        \caption{реакция R2}
-
-    \end{figure}
-    \columnbreak
-    \begin{figure}
-
-        \centering
-        \includegraphics[width=100px]{schemes/reacts/R3.pdf}
-        \caption{реакция R3}
-
-    \end{figure}
-    \begin{figure}
-
-        \centering
-        \includegraphics[width=100px]{schemes/reacts/R4.pdf}
-        \caption{реакция R4}
-
-    \end{figure}
-    \end{multicols}
+%     \end{figure}
 
 
-\end{frame}
+
+
+% \end{frame}
 
 % %Слайд для описания электронных реакций
 % \begin{frame}{Электронные реакции}
