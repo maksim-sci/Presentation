@@ -18,7 +18,7 @@
                 \node at ( 0,4) [circle,draw,fill=red!20] (){};
                 
 
-                \node at ( 1,0) [circle,draw,fill=green!20] (){};
+                \node at ( 1,0) [circle,draw] (){};
                 \node at ( 1,2) [circle,draw,fill=blue!20] (){};
 
                 \node at ( 0,3) [circle,draw,fill=blue!20] (){};
@@ -41,8 +41,8 @@
                 \node at ( 0,4) [circle,draw,fill=red!20] (){};
                 
 
-                \node at ( 1,2) [circle,draw,fill=green!20] (){};
-                \node at ( 1,0) [circle,draw,fill=blue!20] (){};
+                \node at ( 1,2) [circle,draw] (a2){};
+                \node at ( 1,0) [circle,draw,fill=blue!20] (a1){};
 
                 \node at ( 0,3) [circle,draw,fill=blue!20] (){};
                 \node at ( 2,3) [circle,draw,fill=blue!20] (){};
@@ -50,6 +50,8 @@
 
                 \node at ( 0,1) [circle,draw,fill=blue!20] (){};
                 \node at ( 2,1) [circle,draw,fill=blue!20] (){};
+
+                \draw [->] (a1) -- (a2);
             \end{tikzpicture}
         };
         \draw [ultra thick,->] (after) -- (before);

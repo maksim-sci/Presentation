@@ -20,6 +20,8 @@
                 \node at ( 0,1) [circle,draw,fill=blue!20] (){};
                 \node at ( 2,1) [circle,draw,fill=blue!20] (){};
 
+                \node at ( 1,1) [circle,draw] (){};
+
             \end{tikzpicture}
         };
         \node at (0,0) [rectangle,draw](after) {%
@@ -29,12 +31,14 @@
                 \node at ( 2,0) [circle,draw,fill=red!20] (){};
                 \node at ( 2,2) [circle,draw,fill=red!20] (){};
                 
-                \node at ( 1,1) [circle,draw,fill=blue!20] (){-};
-                \node at ( 1,0) [circle,draw,fill=green!20] (){+};
+                \node at ( 1,1) [circle,draw,fill=blue!20] (a1){};
+                \node at ( 1,0) [circle,draw] (a2){};
                 \node at ( 1,2) [circle,draw,fill=blue!20] (){};
 
                 \node at ( 0,1) [circle,draw,fill=blue!20] (){};
                 \node at ( 2,1) [circle,draw,fill=blue!20] (){};
+            
+                \draw [->] (a1) -- (a2);
             \end{tikzpicture}
         };
         \draw [ultra thick,->] (after) -- (before);
