@@ -242,64 +242,85 @@ $\tau = \frac{1}{S_N}$ - время, за которое происходит э
 
 \begin{frame}{Математические основы модели} {Частоты реакций}
 
-    \small
 
-    Напряжение в любой точке находится как:
+    \begin {small}
+    \begin {multicols} {2}
+
+    Напряжение находится как:
 
     \[U = \frac{l\cdot U_{cond}}{D}+U_{evald}\],
 
-    где \(U_{cond}\) - Напряжение между электродов, \(l\) - расстояние до положительного электрода, \(D\) - расстояние между электродами, а \(U_{evald}\) - периодический потенциал, рассчитанный с помощью метода Эвальда.
-
     Частоты протекания ионных реакций находятся по формуле:
 
-    \[\nu = \nu _0 \cdot
-    \exp{(-\frac{E-\gamma \Delta q \Delta U}{k_bT})} \cdot
-    \exp{(-\frac{\Delta a}{a})}
+    \[\nu_{ion} = \nu _0 \cdot
+    \exp{(-\frac{E_r-\gamma \Delta q \Delta U}{k_bT})} \cdot
+    %\exp{(-\frac{2\Delta r}{a})}
     \],
 
-    где T - температура,
-    \(k_b\) - постоянная больцмана,
-    E - барьер реакции,
-    \(\Delta q\) - переносимый заряд,
-    \(\Delta a\) - расстояние, на которое заряд переносится,
-    \(\Delta U\) - напряжение между начальным и конечным положением,
-    \(\nu_0\)  - базовая частота реакции,
-    \(a\) - Длина локализации,
-    \(\gamma\) - вклад поляризации связей в локальное электрическое поле.
+    Частоты перескока между ловушек:
     
+    \[\nu_{tat} = \nu _0 \cdot
+    \exp{(-\frac{E_r- e \Delta U}{k_bT})} \cdot
+    \exp{(-\frac{2\Delta r}{\xi})}
+    \],
 
+    \columnbreak
     
-\end{frame}
+    \textbf{Параметры}
 
+    \(\nu_o = 10^{13} s^{-1} \)
+    %\footnotemark[4] \footnotetext[4] {https://doi.org/10.1016/j.microrel.2017.12.021}
 
-%Используемые в модели константы
-\begin{frame}{Параметры и константы}
-    \begin{table}
-        \begin{tabular}{llc}
-          Параметр & Величина\\ 
-          Базовая частота (\(\nu _0\)) &
-          \(10^{-13} s^{-1}\) \\
-          \(\gamma\) & 4.0 \\
-        \end{tabular}
-        \caption{Базовые константы}
-      \end{table}
+    \(\gamma = 4.0  \) 
+    \footnotemark[4] \footnotetext[4]{Appl. Phys. Lett. 82, 781 (2003); https://doi.org/10.1063/1.1541096} 
 
-      \begin{table}
-        \begin{tabular}{llc}
+    %\xi = 2 \r{A}
+
+    \begin{tabular}{|l|l|}
           Реакция & Барьер (эВ) \\ 
           R1 &  \(6.4\) \\
           R2 &  \(1.4\) \\
           R3 &  \(0.8\) \\
           R4 &  \(4.1\) \\
-          E1 &  \(0.3\) \\
-          E2 &  \(0.3\) \\
-          E3 &  \(0.3\) \\
+        TAT &  \(0.2-0.4\) 
+        \footnotemark[5] \footnotetext[5]{Appl. Phys. Lett. 89, 042904 (2006); https://doi.org/10.1063/1.2234840}
         \end{tabular}
-        \caption{Барьеры реакций}
-      \end{table}
 
+    \end {multicols}
+
+    \end {small}
 
 \end{frame}
+
+
+%Используемые в модели константы
+% \begin{frame}{Параметры и константы}
+%     \begin{table}
+%         \begin{tabular}{llc}
+%           Параметр & Величина\\ 
+%           Базовая частота (\(\nu _0\)) &
+%           \(10^{-13} s^{-1}\) \\
+%           \(\gamma\) & 4.0 \footnotemark[4]\\
+%         \end{tabular}
+%         \caption{Базовые константы}
+%       \end{table}
+
+%       \begin{table}
+%         \begin{tabular}{llc}
+%           Реакция & Барьер (эВ) \\ 
+%           R1 &  \(6.4\) \\
+%           R2 &  \(1.4\) \\
+%           R3 &  \(0.8\) \\
+%           R4 &  \(4.1\) \\
+%           E1 &  \(0.3\) \\
+%           E2 &  \(0.3\) \\
+%           E3 &  \(0.3\) \\
+%         \end{tabular}
+%         \caption{Барьеры реакций}
+%       \end{table}
+
+%       \footnotetext[4]{Appl. Phys. Lett. 82, 781 (2003); https://doi.org/10.1063/1.1541096}
+% \end{frame}
 
 % \begin{frame} {Найденные барьеры}
 
