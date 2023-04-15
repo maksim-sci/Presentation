@@ -66,3 +66,9 @@ schemes/simulator/simulator.pdf
 schemes/simulator/simulator.synctex.gz
 img/mc_hafnium.pdf
 img/POSCAR.pdf
+schemes/KMK_math/kmk_math.aux
+schemes/KMK_math/kmk_math.fdb_latexmk
+schemes/KMK_math/kmk_math.fls
+schemes/KMK_math/kmk_math.log
+schemes/KMK_math/kmk_math.pdf
+schemes/KMK_math/kmk_math.synctex.gz
