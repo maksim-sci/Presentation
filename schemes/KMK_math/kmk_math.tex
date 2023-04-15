@@ -1,0 +1,83 @@
+\documentclass{standalone}
+\usepackage[T2A,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{tikz}
+\usetikzlibrary {positioning}
+\usetikzlibrary{calc, intersections}
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri}
+\begin{document}
+    \begin{tikzpicture}
+
+        roundnode/.style={circle, draw=green!60, fill=green!5, very thick, minimum size=7mm},
+        squarednode/.style={rectangle, draw=red!60, fill=red!5, very thick, minimum size=5mm},
+        %\draw[blue, very thick] (0,0) rectangle (3,2);
+
+        \newcommand\beginheight{0.5}
+        \newcommand\heightend{-0.5}
+
+        \newcommand\bonussize{0.7}
+        
+        \coordinate (linebegin0) at (0,\beginheight);
+        \coordinate (linebegin1) at (2,\beginheight);
+        \coordinate (linebegin2) at (5,\beginheight);
+        \coordinate (linebegin3) at (8,\beginheight);
+        \coordinate (linebegin4) at (10,\beginheight);
+        \coordinate (linebegin5) at (12,\beginheight);
+
+        \coordinate (lineend0) at (0,\heightend);
+        \coordinate (lineend1) at (2,\heightend);
+        \coordinate (lineend2) at (5,\heightend);
+        \coordinate (lineend3) at (8,\heightend);
+        \coordinate (lineend4) at (10,\heightend);
+        \coordinate (lineend5) at (12,\heightend);
+
+
+
+        \draw[green, line width=2mm] (0,0) -- (12,0);
+        \draw[red, line width=2mm] (5,0) -- (8,0);
+
+        \draw[black, line width=2mm] (linebegin0) -- (lineend0);
+        \draw[black, line width=2mm] (linebegin1) -- (lineend1);
+        \draw[red, line width=2mm] (linebegin2) -- (lineend2);
+        \draw[red, line width=2mm] (linebegin3) -- (lineend3);
+        \draw[black, line width=2mm] (linebegin4) -- (lineend4);
+        \draw[black, line width=2mm] (linebegin5) -- (lineend5);
+
+
+        %\newcommand\textheight{\beginheight+\bonussize}
+
+        
+
+        \node at ( 0,\beginheight+\bonussize) [] (){\Huge 0};
+        \node at ( 2,\beginheight+\bonussize) [] (){\Huge \(S_1\)};
+        \node at ( 5,\beginheight+\bonussize) [] (){\Huge \(S_i\)};
+        \node at ( 8,\beginheight+\bonussize) [] (){\Huge \(S_{i+1}\)};
+        \node at ( 10,\beginheight+\bonussize) [] (){\Huge \(S_{N-1}\)};
+        \node at ( 12,\beginheight+\bonussize) [] (){\Huge \(S_{N}\)};
+
+        \node at ( 1,\heightend-\bonussize) [] (){\Huge \(\nu_{1}\)};
+        \node at ( 3.5,\heightend-\bonussize) [] (){\Huge ...};
+        \node at ( 6.5,\heightend-\bonussize) [] (){\Huge \(\nu_{i+1}\)};
+        \node at ( 9,\heightend-\bonussize) [] (){\Huge ...};
+        \node at ( 11,\heightend-\bonussize) [] (){\Huge \(\nu_{N}\)};
+
+        \coordinate (R_curcle) at (6,0);
+        % \coordinate (R_curcle_up) at (6,\beginheight);
+
+        % \draw [line width=2mm,->] (R_curcle_up) -- (R_curcle);
+
+        \node at ( 6,0.8) [] (){\Huge $R$};
+
+        \node at ( R_curcle) [circle,draw,fill=blue!20] (){};
+
+        \draw [line width=2mm,<->] (lineend0) -- (lineend1);
+        \draw [line width=2mm,<->] (lineend1) -- (lineend2);
+        \draw [line width=2mm,<->] (lineend2) -- (lineend3);
+        \draw [line width=2mm,<->] (lineend3) -- (lineend4);
+        \draw [line width=2mm,<->] (lineend4) -- (lineend5);
+
+        
+linebegin5
+      \end{tikzpicture}
+\end{document}
