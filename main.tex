@@ -245,7 +245,7 @@ $\tau = \frac{1}{S_N}$ - время, за которое происходит э
 \begin{frame}{Математические основы модели} {Частоты реакций}
 
 
-    \begin {small}
+    \begin {scriptsize}
     \begin {multicols} {2}
 
     Напряжение находится как:
@@ -255,16 +255,16 @@ $\tau = \frac{1}{S_N}$ - время, за которое происходит э
     Частоты протекания ионных реакций находятся по формуле:
 
     \[\nu_{ion} = \nu _0 \cdot
-    \exp{(-\frac{E_r-\gamma \Delta q \Delta U}{k_bT})} \cdot
+    \exp{\left(-\frac{E_r-\gamma \Delta q \Delta U}{k_bT}\right)} \cdot
     %\exp{(-\frac{2\Delta r}{a})}
     \],
 
     Частоты перескока между ловушек:
     
     \[\nu_{tat} = \nu _0 \cdot
-    \exp{(-\frac{E_r- e \Delta U}{k_bT})} \cdot
-    \exp{(-\frac{2\Delta r}{\xi})}
-    \],
+    \exp{\left(-\frac{E_r- e \Delta U}{k_bT}\right)} \cdot
+    \exp{\left(-\frac{2\Delta r}{\xi}\right)}
+    \]
 
     \columnbreak
     
@@ -276,17 +276,27 @@ $\tau = \frac{1}{S_N}$ - время, за которое происходит э
     \(\gamma = 4.0  \) 
     \footnotemark[4] \footnotetext[4]{Appl. Phys. Lett. 82, 781 (2003); https://doi.org/10.1063/1.1541096} 
 
-    %\xi = 2 \r{A}
-
+    \(\xi = 2 \text{\r{A}}\) 
+    %\footnotemark[5] \footnotetext[5]{Phys. Rev. Lett. 93, 177206 – Published 22 October 2004} 
+    \hspace{10px}
     \begin{tabular}{|l|l|}
           Реакция & Барьер (эВ) \\ 
           R1 &  \(6.4\) \\
           R2 &  \(1.4\) \\
-          R3 &  \(0.8\) \\
+          R3 &  \(2.3\) \\
           R4 &  \(4.1\) \\
         TAT &  \(0.2-0.4\) 
         \footnotemark[5] \footnotetext[5]{Appl. Phys. Lett. 89, 042904 (2006); https://doi.org/10.1063/1.2234840}
         \end{tabular}
+
+
+        \begin{figure}
+            \centering
+            \includegraphics[width=90px]{img/R1_exexexe.pdf}
+            \hspace{20px}
+            \caption{DFT расчет для барьера реакции R1}
+        \end{figure}
+
 
     \end {multicols}
 
