@@ -300,7 +300,63 @@ $\tau = \frac{1}{S_N}$ - время, за которое происходит э
 
     \end {multicols}
 
-    \end {small}
+    \end {scriptsize}
+
+\end{frame}
+
+\begin {frame} {Ток}
+
+\begin {footnotesize}
+
+\begin {multicols} {2}
+Для нахождения тока, протекающего через мемристор учитываются определенные механизмы течения тока:
+
+\[I_{ion} = \sum_{i=1}^{N_{ion}} \frac{\Delta q_{i} \Delta r_i} {D \tau } \]
+
+\[I_{tat} = \sum_{i=1}^{N_{tat}} \frac{\Delta q_{i} \Delta r_i} {D \tau } \]
+
+\columnbreak
+
+$I_{shottky} =  \int  {j_{shottky}dV}$
+
+$I_{pf} = \int {j_{pf}dV}$
+
+\hspace{30px}
+
+\textbf{Параметры}
+
+$E_b = 0.9$ Эв \footnotemark[8]
+
+$\Phi = 3.5$ Эв
+
+$\epsilon_{opt} = 4.0$ \footnotemark[6]
+
+$\rho_0 = 1.7 \cdot 10^{14} \text{см}^{-3} $ \footnotemark[6]
+
+$\mu = 10^-3 \frac{\text{см}}{\text{В}\cdot\text{с}} $
+
+
+\end{multicols}
+$
+    j_{shottky} = \frac{e m k_b^2 T^2} {2 \pi^2 \hbar^3}
+    \exp\left[-\frac{1}{k_b T}\left(E_b-\sqrt{\frac{e^3 F}{4\pi\epsilon_0\epsilon_{opt}}}\right)\right]
+$ 
+\footnotemark[6]\footnotetext[6]{Popescu, Dan Horia. Modeling of Leakage Currents in High-k Dielectrics for Future DRAM Application. Diss. Technische Universität München, 2015.}
+
+$
+    j_{pf} = e\mu\rho_0 F \exp 
+    \left[-\frac{1}{k_bT}\left(\Phi-\sqrt{\frac{e^3 F}{4\pi\epsilon_0\epsilon_{opt}}}\right)\right]
+$
+\footnotemark[7]\footnotetext[7]{ Basic Solid State Physics. V. 239, 59-70 (2003);
+https://doi.org/10.1002/pssb.200303239}
+
+% $
+%     j_{direct} = 
+% $
+
+\end {footnotesize}
+
+\footnotetext[8]{Journal of Vacuum Science \& Technology B 31, 01A105 (2013); https://doi.org/10.1116/1.4767125}
 
 \end{frame}
 
